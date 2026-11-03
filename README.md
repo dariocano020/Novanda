@@ -12,9 +12,9 @@
 
 ## 📌 Acceso Rápido a la Documentación Oficial
 
-* 📖 **[MEMORIA COMPLETA CONSOLIDADA (v1 y v2)](MEMORIA.md)** — Documento maestro oficial que integra todo el desarrollo de la Semana 1 y la Semana 2.
+* 📖 **[MEMORIA COMPLETA CONSOLIDADA (v1 y v2)](MEMORIA.md)** — Documento maestro oficial que integra todo el desarrollo de la Semana 1, Semana 2 y el refinamiento técnico derivado del feedback docente.
 * 📄 **[Memoria v1.0 — Semana 1](docs/memoria/Memoria_Novanda_v1.md)** — Elección de la idea, propuesta de valor, objetivos, alcance, perfiles de usuario y requisitos.
-* 📄 **[Memoria v2.0 — Semana 2](docs/memoria/Memoria_Novanda_v2.md)** — Estado del arte, estudio de la competencia (Pikotea, Sunday, Square), matrices DAFO, justificación de oportunidad y propuesta diferencial.
+* 📄 **[Memoria v2.0 — Semana 2](docs/memoria/Memoria_Novanda_v2.md)** — Estado del arte, estudio de la competencia (Pikotea, Sunday, Square), matrices DAFO y refinamiento técnico (roles RBAC, distinción de estados comanda/plato, priorización MoSCoW, ciclo de vida de 8 etapas y arquitectura en tiempo real sin recarga manual).
 * 📋 **[Tablero Kanban y Gestión de Tareas](docs/kanban/Tablero_Kanban.md)** — Control de actividades de los Sprints 1 y 2 según metodología ágil.
 * 🖼️ **[Carpeta de Capturas y Evidencias](docs/capturas/)** — Capturas analizadas de las herramientas de la competencia (`captura_pikotea.png`, `captura_sunday.png`).
 * 📁 **[PDF de Referencia Oficial de la Asignatura](docs/referencia/Semana_2_Analisis_del_Sector.pdf)** — Pauta académica entregada para la Semana 2.

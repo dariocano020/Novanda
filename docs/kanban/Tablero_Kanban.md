@@ -35,10 +35,10 @@ El flujo de trabajo se divide en cuatro estados fundamentales para cada tarjeta 
 
 ---
 
-## 3. Tablero de la Semana 2 — Análisis del Sector y Estudio de Mercado
+## 3. Tablero de la Semana 2 — Análisis del Sector, Estudio de Mercado y Feedback Docente
 
 ### Resumen del Sprint 2
-* **Objetivo:** Investigar la competencia, realizar pruebas de usabilidad, elaborar DAFOs comparativos y justificar la propuesta de valor de Novanda.
+* **Objetivo:** Investigar la competencia, realizar pruebas de usabilidad, elaborar DAFOs comparativos, justificar la propuesta de valor de Novanda e incorporar los ajustes técnicos sugeridos por el profesor tutor de DAW.
 * **Estado:** Completado (100%).
 
 | ID Tarea | Título de la Tarea | Estimación | Estado | Evidencia / Entregable |
@@ -51,9 +51,13 @@ El flujo de trabajo se divide en cuatro estados fundamentales para cada tarjeta 
 | **TSK-14** | Elaboración de los DAFO de Pikotea, Sunday y Square | 3h | `DONE` | Sección 4 de Memoria v2.0 |
 | **TSK-15** | Elaboración de la matriz DAFO propia de Novanda | 2h | `DONE` | Sección 5 de Memoria v2.0 |
 | **TSK-16** | Identificación de oportunidades y respuesta a las 5 preguntas clave | 2.5h | `DONE` | Sección 6 de Memoria v2.0 |
-| **TSK-17** | Revisión y ajuste de los requerimientos de la Semana 1 | 1.5h | `DONE` | Sección 7 de Memoria v2.0 |
-| **TSK-18** | Redacción de la Memoria v2.0 y consolidación en MEMORIA.md | 4h | `DONE` | Archivos `Memoria_Novanda_v2.md` y `MEMORIA.md` |
-| **TSK-19** | Organización de documentación y commits en GitHub | 1h | `DONE` | Repositorio GitHub actualizado con v1 y v2 |
+| **TSK-17** | Definición de permisos de perfiles y reglas de modificación de comanda | 2h | `DONE` | Matriz RBAC en Sección 7.1 de Memoria v2.0 |
+| **TSK-18** | Modelado de la distinción entre estado de comanda y estado de plato | 1.5h | `DONE` | Tabla de estados en Sección 7.2 de Memoria v2.0 |
+| **TSK-19** | Priorización MoSCoW: delimitación de MVP frente a ampliaciones | 1.5h | `DONE` | Sección 7.3 de Memoria v2.0 |
+| **TSK-20** | Especificación del recorrido integral y ciclo de vida de la comanda | 2.5h | `DONE` | Diagrama y flujo en Sección 7.4 de Memoria v2.0 |
+| **TSK-21** | Diseño arquitectónico del tiempo real con WebSockets para cocina KDS sin F5 | 2.5h | `DONE` | Sección 7.5 de Memoria v2.0 y 2.8 de MEMORIA.md |
+| **TSK-22** | Redacción de la Memoria v2.0 actualizada y consolidación en MEMORIA.md | 3.5h | `DONE` | Archivos `Memoria_Novanda_v2.md` y `MEMORIA.md` |
+| **TSK-23** | Organización de documentación y commits en GitHub | 1h | `DONE` | Repositorio GitHub actualizado con versión 2.0 refinada |
 
 ---
 
@@ -65,12 +69,12 @@ El flujo de trabajo se divide en cuatro estados fundamentales para cada tarjeta 
 ├────────┬─────────────────────────────────────────────────┬─────────────┤
 │ ID     │ Descripción de la Tarea                         │ Prioridad   │
 ├────────┼─────────────────────────────────────────────────┼─────────────┤
-│ TSK-20 │ Bocetos de interfaz (Wireframes / Mockups)      │ ALTA        │
-│ TSK-21 │ Diseño de la arquitectura de contenedores Docker│ ALTA        │
-│ TSK-22 │ Modelado entidad-relación de la base de datos   │ ALTA        │
-│ TSK-23 │ Creación de la API REST / WebSocket en backend │ MEDIA       │
-│ TSK-24 │ Desarrollo del cliente SPA para tablet comensal │ MEDIA       │
-│ TSK-25 │ Desarrollo del panel de comandas de cocina KDS  │ MEDIA       │
-│ TSK-26 │ Integración de avisos en tiempo real para sala  │ MEDIA       │
+│ TSK-24 │ Bocetos de interfaz (Wireframes / Mockups Figma)│ ALTA        │
+│ TSK-25 │ Diseño de la arquitectura de contenedores Docker│ ALTA        │
+│ TSK-26 │ Modelado entidad-relación y DDL de base de datos│ ALTA        │
+│ TSK-27 │ Creación de la API REST / WebSocket en backend  │ MEDIA       │
+│ TSK-28 │ Desarrollo del cliente SPA para tablet comensal │ MEDIA       │
+│ TSK-29 │ Desarrollo de pantalla reactiva de cocina KDS   │ MEDIA       │
+│ TSK-30 │ Integración de avisos en tiempo real para sala  │ MEDIA       │
 └────────┴─────────────────────────────────────────────────┴─────────────┘
 ```

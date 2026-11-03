@@ -1,32 +1,57 @@
-# MEMORIA DEL PROYECTO: NOVANDA (Versión 2.0)
-## Semana 2 — Análisis del Sector y Estudio de Mercado
-### Apartado: Estado del Arte y Aplicaciones Existentes
+# MEMORIA DEL PROYECTO: NOVANDA (Versión 2.0 - Actualizada)
+## Semana 2 — Análisis del Sector, Estudio de Mercado y Refinamiento del Alcance
+### Módulo: Despliegue de Aplicaciones Web (DAWEB) — IES Fernando III
 
 ---
 
 ### Datos del Proyecto y Autoría
 * **Proyecto:** Novanda — Sistema Interactivo de Pedidos y Comunicación en Mesa para Hostelería
-* **Autor:** Darío Caño Molina
+* **Autor:** Darío Caño Molina (`dariocano2005@gmail.com`)
 * **Centro Educativo:** IES Fernando III
 * **Ciclo Formativo:** Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)
 * **Módulo Profesional:** Despliegue de Aplicaciones Web (DAWEB)
 * **Curso Académico:** 2025 / 2026
-* **Versión del Documento:** v2.0 (Entregable Semana 2)
+* **Versión del Documento:** v2.0 (Revisión consolidada con mejoras docentes de Semana 2)
 * **Repositorio Oficial:** [https://github.com/dariocano020/Novanda.git](https://github.com/dariocano020/Novanda.git)
 
 ---
 
-## 1. Introducción a la Semana 2
+## Índice de Contenidos
 
-Tras definir en la Semana 1 la idea inicial y los objetivos de **Novanda**, el propósito de esta segunda semana es realizar un estudio exhaustivo del mercado y del estado del arte tecnológico en el sector de la hostelería.
+1. [Introducción a la Semana 2 y Validación de la Propuesta](#1-introducción-a-la-semana-2-y-validación-de-la-propuesta)
+2. [Estado del Arte y Aplicaciones Existentes](#2-estado-del-arte-y-aplicaciones-existentes)
+   * 2.1. [Pikotea](#21-aplicación-1-pikotea)
+   * 2.2. [Sunday](#22-aplicación-2-sunday)
+   * 2.3. [Square para Restaurantes](#23-aplicación-3-square-para-restaurantes)
+3. [Análisis de la Competencia y Pruebas Funcionales](#3-análisis-de-la-competencia-y-pruebas-funcionales)
+   * 3.1. [Consulta de Servicios y Realización de Pedidos](#31-consulta-de-servicios-y-realización-de-pedidos)
+   * 3.2. [Información, Registro y Accesibilidad](#32-información-registro-y-accesibilidad)
+4. [Análisis de Fortalezas y Debilidades (DAFO de Competidores)](#4-análisis-de-fortalezas-y-debilidades-dafo-de-competidores)
+5. [DAFO Propio de Novanda (Análisis Estratégico)](#5-dafo-propio-de-novanda-análisis-estratégico)
+6. [Oportunidad de Nuestro Proyecto (Propuesta de Valor)](#6-oportunidad-de-nuestro-proyecto-propuesta-de-valor)
+7. [Incorporación de Mejoras y Concreción Técnica (Feedback Docente DAW)](#7-incorporación-de-mejoras-y-concreción-técnica-feedback-docente-daw)
+   * 7.1. [Usuarios y Roles: Matriz de Permisos y Control de Comandas](#71-usuarios-y-roles-matriz-de-permisos-y-control-de-comandas)
+   * 7.2. [Distinción entre Estado de Pedido Completo y Estado de Cada Plato](#72-distinción-entre-estado-de-pedido-completo-y-estado-de-cada-plato)
+   * 7.3. [Primeras Funcionalidades: Priorización MoSCoW (MVP vs Ampliaciones)](#73-primeras-funcionalidades-priorización-moscow-mvp-vs-ampliaciones)
+   * 7.4. [Solución Propuesta: Recorrido y Ciclo de Vida de una Comanda](#74-solución-propuesta-recorrido-y-ciclo-de-vida-de-una-comanda)
+   * 7.5. [Aspecto Crítico a Vigilar: Funcionamiento en Tiempo Real sin Recarga Manual](#75-aspecto-crítico-a-vigilar-funcionamiento-en-tiempo-real-sin-recarga-manual)
+8. [Revisión y Ajustes del Proyecto (Semana 1 Revisitada)](#8-revisión-y-ajustes-del-proyecto-semana-1-revisitada)
+9. [Gestión de Tareas con Tablero Kanban (Semana 2)](#9-gestión-de-tareas-con-tablero-kanban-semana-2)
 
-El objetivo no es crear una aplicación simplemente porque la idea resulte atractiva, sino **entender qué necesidad real cubre**, cómo resuelven actualmente este problema las soluciones líderes del mercado, qué hacen bien, qué limitaciones presentan y **por qué tiene pleno sentido desarrollar nuestra propia solución**.
+---
 
-En este documento se responde a cuatro cuestiones fundamentales:
-1. ¿Qué aplicaciones existen que resuelven un problema parecido?
-2. ¿Qué hacen bien y qué limitaciones técnicas y funcionales tienen?
-3. ¿Qué necesidades reales del comensal y del hostelero siguen sin estar suficientemente cubiertas?
-4. ¿Qué aporta y cómo se diferencia **Novanda** frente a la oferta actual?
+## 1. Introducción a la Semana 2 y Validación de la Propuesta
+
+Tras definir en la Semana 1 la idea inicial y los objetivos de **Novanda**, el propósito de esta segunda semana es realizar un estudio exhaustivo del mercado y del estado del arte tecnológico en el sector de la hostelería, integrando al mismo tiempo las directrices de refinamiento técnico transmitidas por el profesor tutor del ciclo formativo de Desarrollo de Aplicaciones Web (DAW).
+
+### Dictamen y Valoración Docente Inicial:
+> **"La propuesta es sólida y tiene potencial suficiente para un proyecto de fin de ciclo de DAW."**
+
+Para alcanzar la máxima excelencia académica y garantizar una implementación viable, se abordan de manera exhaustiva en esta versión los cuatro aspectos clave de mejora indicados por el profesor:
+1. **Usuarios y roles:** Concreción exhaustiva de permisos, aclarando quién puede modificar, cancelar o consultar comandas, y distinguiendo el estado del pedido completo frente al estado individual de cada plato.
+2. **Primeras funcionalidades:** Priorización técnica separando de forma nítida las funcionalidades imprescindibles (MVP) para demostrar el flujo principal completo de las ampliaciones futuras.
+3. **Solución propuesta:** Definición precisa del recorrido de una comanda, desde su origen en la tablet de mesa hasta su cierre y cobro, especificando todos sus cambios de estado y excepciones.
+4. **Aspecto principal a vigilar (Tiempo Real):** Garantía arquitectónica de que la pantalla de cocina (KDS) reciba y muestre las comandas entrantes de forma instantánea y reactiva sin requerir recargas manuales de página (`F5`).
 
 ---
 
@@ -152,7 +177,7 @@ A partir de las lecciones extraídas de la competencia, se elabora la matriz **D
 
 | | **Aspectos Positivos** | **Aspectos Negativos** |
 | :---: | :--- | :--- |
-| **Factores Internos** | **FORTALEZAS (F)**<br>• Hardware táctil dedicado en cada mesa: siempre listo, sin exigir el móvil del cliente.<br>• Botonera fija de acciones rápidas ("Llamar Camarero" y "Pedir Cuenta").<br>• Interfaz en modo oscuro ultra-visual por tarjetas, accesible para todas las edades.<br>• No requiere registros, descargas ni pasarelas de pago externas obligatorias.<br>• Comunicación directa y en tiempo real mesa-camarero-cocina sin intermediarios. | **DEBILIDADES (D)**<br>• Requiere una inversión inicial en hardware (tablets de 10" para el restaurante).<br>• Necesidad de implementar medidas de seguridad física (soportes antirrobo) y gestión de carga de las tablets.<br>• Proyecto en fase inicial de desarrollo frente a plataformas comerciales consolidadas. |
+| **Factores Internos** | **FORTALEZAS (F)**<br>• Hardware táctil dedicado en cada mesa: siempre listo, sin exigir el móvil del cliente.<br>• Botonera fija de acciones rápidas ("Llamar Camarero" y "Pedir Cuenta").<br>• Interfaz en modo oscuro ultra-visual por tarjetas, accesible para todas las edades.<br>• No requiere registros, descargas ni pasarelas de pago externas obligatorias.<br>• Comunicación directa y en tiempo real mesa-camarero-cocina mediante WebSockets sin recarga manual. | **DEBILIDADES (D)**<br>• Requiere una inversión inicial en hardware (tablets de 10" para el restaurante).<br>• Necesidad de implementar medidas de seguridad física (soportes antirrobo) y gestión de carga de las tablets.<br>• Proyecto en fase inicial de desarrollo frente a plataformas comerciales consolidadas. |
 | **Factores Externos** | **OPORTUNIDADES (O)**<br>• Fatiga y frustración generalizada de los clientes con los códigos QR en teléfonos móviles.<br>• Cuellos de botella recurrentes en bares y restaurantes medianos en horas punta.<br>• Abaratamiento constante de tablets Android de 10 pulgadas en el mercado.<br>• Nicho desatendido: locales que buscan agilizar la sala sin verse obligados a cambiar su software de TPV o su gestor contable actual. | **AMENAZAS (A)**<br>• Resistencia al cambio tecnológico en perfiles de hosteleros tradicionales.<br>• Riesgo de vandalismo o rotura accidental de pantallas táctiles en mesas con niños o celebraciones.<br>• Competidores con grandes presupuestos de marketing que ofrecen software gratuito a cambio de cobrar altas comisiones financieras. |
 
 ---
@@ -162,9 +187,7 @@ A partir de las lecciones extraídas de la competencia, se elabora la matriz **D
 En base a la información recopilada, se da respuesta a las cinco preguntas estratégicas de la actividad:
 
 ### 1. ¿Qué necesidades has detectado en las aplicaciones analizadas?
-La inmensa mayoría de las herramientas comerciales priorizan la gestión económica, fiscal y administrativa del local (facturación, control de comisiones, inventario masivo) por encima del confort directo y la experiencia de usuario del comensal.
-
-Falta una herramienta diseñada desde la perspectiva de la mesa que facilite una **comunicación no verbal inmediata con el camarero** (avisarle con un toque para resolver dudas o solicitar la cuenta) sin imponer al cliente trámites de pago engorrosos ni obligar al hostelero a contratar un ERP de miles de euros.
+La inmensa mayoría de las herramientas comerciales priorizan la gestión económica, fiscal y administrativa del local (facturación, control de comisiones, inventario masivo) por encima del confort directo y la experiencia de usuario del comensal. Falta una herramienta diseñada desde la perspectiva de la mesa que facilite una **comunicación no verbal inmediata con el camarero** (avisarle con un toque para resolver dudas o solicitar la cuenta) sin imponer al cliente trámites de pago engorrosos ni obligar al hostelero a contratar un ERP de miles de euros.
 
 ### 2. ¿Qué limitaciones se repiten en varias soluciones?
 * **La dependencia total del móvil del cliente mediante códigos QR (BYOD):** Genera fricción por falta de batería, reflejos de luz en los códigos plastificados, exclusión de personas mayores y fallos de cobertura.
@@ -185,52 +208,331 @@ Falta una herramienta diseñada desde la perspectiva de la mesa que facilite una
 ### 5. ¿Qué funcionalidades permitirán diferenciar a Novanda?
 1. **Botonera de acciones rápidas permanente:** Presencia constante de dos botones destacados en pantalla ("Llamar Camarero" y "Pedir la Cuenta"). No es necesario abrir menús secundarios para solicitar atención.
 2. **Diseño ultra-visual en modo oscuro y tarjetas de platos:** Evita el *scroll* vertical monótono e interminable. Las categorías se presentan en tarjetas de alto contraste que destacan las fotos del producto y la advertencia clara de alérgenos.
-3. **Panel KDS y de Sala en tiempo real:** Los camareros disponen de un semáforo visual de mesas pendientes y los cocineros reciben las comandas organizadas por orden de llegada con avisos acústicos discretos.
+3. **Panel KDS y de Sala en tiempo real:** Los camareros disponen de un semáforo visual de mesas pendientes y los cocineros reciben las comandas organizadas por orden de llegada con avisos acústicos discretos sin necesidad de recargar la página.
 
 ---
 
-## 7. Revisión y Ajustes del Proyecto (Semana 1 Revisitada)
+## 7. Incorporación de Mejoras y Concreción Técnica (Feedback Docente DAW)
 
-Tras completar el análisis de la competencia y el estudio de mercado, se revisa la documentación de la Semana 1:
-
-* **Se confirma:** La idoneidad de prescindir del modelo BYOD (QR móvil) y apostar firmemente por tablets dedicadas en mesa. Las evidencias del mercado corroboran que la fatiga del comensal ante los QR móviles es una oportunidad de oro.
-* **Se ajusta:** Se descarta deliberadamente implementar una pasarela de pago bancario propia integrada en la tablet durante la fase inicial. Obligar al restaurante a canalizar los cobros por nuestra pasarela implicaría asumir comisiones financieras y normativas PCI-DSS complejas, encareciendo el producto y alejándonos de nuestro objetivo primordial (la agilidad en la comanda y la sala). El cobro se mantiene mediante la solicitud formal de cuenta para que el camarero acuda con el datáfono o el cambio tradicional.
-* **Se potencia:** La reactividad del sistema comensal-cocina mediante WebSockets en red local para que las tablets no dependan de la velocidad de salida a internet si la conexión externa del local sufre interrupciones.
-
----
-
-## 8. Gestión de Tareas con Tablero Kanban (Semana 2)
-
-En cumplimiento de la metodología docente (apartado H de la guía de trabajo), se ha planificado y controlado la ejecución del estudio de mercado a través del tablero Kanban del proyecto.
+Atendiendo puntualmente a la retroalimentación del profesor, este apartado formaliza las definiciones de seguridad, ciclo de vida de comandas, priorización de desarrollo y arquitectura reactiva en tiempo real.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   TABLERO KANBAN: SEMANA 2 (ESTADO)                    │
+│              SÍNTESIS DE MEJORAS INCORPORADAS TRAS EL FEEDBACK         │
+├────────────────────────────────┬───────────────────────────────────────┤
+│ SUGERENCIA DEL PROFESOR        │ SOLUCIÓN CONCRETA INCORPORADA         │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ Concretar permisos de roles y  │ Matriz RBAC formal (Comensal, Sala,   │
+│ aclarar quién modifica/cancela │ Cocina, Admin) con reglas de negocio  │
+│ o consulta comandas.           │ claras de anulación y justificación.  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ Distinguir estado de pedido    │ Separación en dos niveles:            │
+│ completo vs estado de plato.   │ • Estado de Pedido (Order)            │
+│                                │ • Estado de Línea de Plato (OrderItem)│
+├────────────────────────────────┼───────────────────────────────────────┤
+│ Priorizar funcionalidades      │ Clasificación MoSCoW: MVP (Fase 1)    │
+│ imprescindibles vs ampliación. │ centrado en flujo principal vs Fase 2.│
+├────────────────────────────────┼───────────────────────────────────────┤
+│ Definir recorrido y estados    │ Ciclo de vida de 8 pasos con estados  │
+│ de comanda de inicio a fin.    │ y diagrama de flujo estructurado.     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ Vigilancia del tiempo real en  │ Arquitectura WebSockets en red local: │
+│ cocina sin recargar página.    │ KDS reactivo sin F5 y avisos sonoros. │
+└────────────────────────────────┴───────────────────────────────────────┘
+```
+
+---
+
+### 7.1. Usuarios y Roles: Matriz de Permisos y Control de Comandas
+
+Para dotar al sistema del rigor requerido en un proyecto DAW, se delimitan de forma explícita las atribuciones de cada perfil sobre la creación, modificación, cancelación y consulta de comandas:
+
+| Acción sobre la Comanda | Comensal (Tablet Mesa) | Camarero (Personal Sala) | Cocinero (Cocina KDS) | Administrador / Gerente |
+| :--- | :---: | :---: | :---: | :---: |
+| **Consultar Carta y Alérgenos** | ✅ Sí | ✅ Sí | ✅ Sí | ✅ Sí |
+| **Crear Comanda (Borrador)** | ✅ Sí (Solo su mesa) | ✅ Sí (Cualquier mesa) | ❌ No | ✅ Sí (Auditoría) |
+| **Confirmar y Enviar a Cocina** | ✅ Sí (Solo su mesa) | ✅ Sí | ❌ No | ✅ Sí |
+| **Consultar Estado de Comanda** | ✅ Sí (Solo su mesa) | ✅ Sí (Todas las mesas)| ✅ Sí (Cola KDS) | ✅ Sí (Histórico global) |
+| **Modificar Comanda Enviada** | ❌ No (Bloqueado) | ✅ Sí (Con mediación) | ❌ No | ✅ Sí |
+| **Cancelar Comanda Completa** | ❌ No | ✅ Sí (Motivo requerido) | ❌ No | ✅ Sí (Permiso total) |
+| **Cancelar Plato Individual** | ❌ No | ✅ Sí (Justificado) | ✅ Sí (Por fin de stock) | ✅ Sí |
+| **Cambiar Estado de Plato (KDS)** | ❌ No | ❌ No | ✅ Sí (Marchando/Listo) | ✅ Sí |
+| **Marcar Plato como Servido** | ❌ No | ✅ Sí (En sala) | ❌ No | ✅ Sí |
+| **Solicitar Cuenta** | ✅ Sí (Botón directo) | ✅ Sí (En nombre de mesa) | ❌ No | ❌ No |
+| **Cobrar y Cerrar Pedido** | ❌ No | ✅ Sí (Libera mesa) | ❌ No | ✅ Sí |
+| **CRUD de Platos y Precios** | ❌ No | ❌ No | ❌ No | ✅ Sí |
+
+#### Justificación y Reglas de Negocio:
+1. **El Comensal no puede modificar ni cancelar una comanda enviada:** Una vez pulsado "Confirmar Pedido", la comanda entra inmediatamente en la cadena de elaboración de cocina. Permitir que el comensal cancele o modifique platos libremente provocaría duplicación de platos, desperdicio de comida preparada y pérdidas económicas. Si un cliente desea añadir o retirar algo tras el envío, debe pulsar **"Llamar Camarero"** para que el personal de sala gestione la rectificación.
+2. **El Camarero es el árbitro operativo:** El camarero posee la potestad de cancelar platos o comandas completas introduciendo un motivo estandarizado (*"Error de comensal"*, *"Cambio por intolerancia no indicada"*, *"Espera prolongada"*).
+3. **Cocina controla la preparación pero no la venta:** El cocinero no tiene permiso para cobrar ni anular cuentas de clientes, pero puede marcar un plato como `AGOTADO` cuando se agotan los ingredientes, informando a la tablet comensal y a sala.
+
+---
+
+### 7.2. Distinción entre Estado de Pedido Completo y Estado de Cada Plato
+
+Un fallo conceptual habitual en sistemas de comandas es tratar el pedido como una entidad monolítica. En un restaurante real, los diferentes platos de una misma comanda tienen tiempos de preparación dispares (una ensalada fría tarda 3 minutos; un entrecot al punto, 15 minutos; y una bebida sale de barra inmediatamente). Por ello, Novanda modela dos niveles jerárquicos claramente diferenciados:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                    NIVEL 1: ESTADO DEL PEDIDO COMPLETO                 │
+│                                (Order)                                 │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ Contiene 1..N
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                  NIVEL 2: ESTADO DE CADA PLATO / LÍNEA                 │
+│                              (OrderItem)                               │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Estados del Pedido Completo (`Order`):
+* `BORRADOR` (*Draft*): El comensal está añadiendo platos a la cesta en la tablet; la orden no ha sido enviada.
+* `RECIBIDO` (*Submitted*): Comanda confirmada y guardada en BD, transmitida reactivamente a cocina y sala vía WebSocket.
+* `EN_PREPARACION` (*In Progress*): Al menos uno de los platos ha sido marcado por cocina en elaboración.
+* `PARCIALMENTE_LISTO` (*Partially Ready*): Algunos platos están listos en el pase (ej. entrantes o bebidas), pero otros siguen cocinándose.
+* `LISTO_PARA_SERVIR` (*Ready to Serve*): Todos los platos de la comanda están terminados en cocina y esperando al camarero.
+* `SERVIDO` (*Delivered*): Todos los platos han sido entregados físicamente en la mesa.
+* `CUENTA_SOLICITADA` (*Bill Requested*): El comensal ha pulsado el botón "Pedir la Cuenta".
+* `CERRADO_PAGADO` (*Paid / Closed*): Cuenta cobrada por el camarero; la mesa queda vacía y la tablet se resetea.
+* `CANCELADO` (*Cancelled*): Pedido anulado en su totalidad por el camarero o administrador.
+
+#### Estados de cada Plato individual (`OrderItem`):
+* `PENDIENTE` (*Pending*): Entrado en la cola de cocina, a la espera de que la partida correspondiente lo tome.
+* `EN_MARCHA` (*Cooking*): El cocinero ha iniciado la elaboración del plato.
+* `LISTO` (*Ready*): El plato está emplatado en el pase caliente/frío; emite aviso al camarero para su recogida.
+* `SERVIDO` (*Served*): El camarero ha entregado el plato en la mesa.
+* `CANCELADO` (*Cancelled*): Anulado por sala o marcado como agotado por cocina.
+
+#### Tabla de Sincronización Automática entre Niveles:
+
+| Condición de los Platos (`OrderItem`) | Estado Resultante del Pedido (`Order`) |
+| :--- | :--- |
+| Todos los platos en `PENDIENTE` | `RECIBIDO` |
+| Al menos un plato en `EN_MARCHA` y ninguno en `LISTO` | `EN_PREPARACION` |
+| Al menos un plato en `LISTO` y al menos un plato en `PENDIENTE` o `EN_MARCHA` | `PARCIALMENTE_LISTO` |
+| Todos los platos están en `LISTO` o `SERVIDO` (con al menos uno en `LISTO`) | `LISTO_PARA_SERVIR` |
+| Todos los platos válidos han sido marcados como `SERVIDO` | `SERVIDO` |
+| Todos los platos han sido marcados como `CANCELADO` | `CANCELADO` |
+
+---
+
+### 7.3. Primeras Funcionalidades: Priorización MoSCoW (MVP vs Ampliaciones)
+
+Para garantizar que el proyecto sea 100% alcanzable durante el curso lectivo sin dispersar esfuerzos, se aplica la metodología **MoSCoW**, separando las funcionalidades imprescindibles para un flujo principal completo (*Minimum Viable Product*) de las ampliaciones post-MVP:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                 PRIORIZACIÓN DEL ALCANCE (METODOLOGÍA MoSCoW)          │
+├───────────────────────────────────┬────────────────────────────────────┤
+│ 🟢 FASE 1: IMPRESCINDIBLES (MVP)   │ 🔵 FASE 2: AMPLIACIONES FUTURAS    │
+│    (Must Have - Demostración)     │    (Could Have / Won't Have)       │
+├───────────────────────────────────┼────────────────────────────────────┤
+│ • Catálogo táctil modo oscuro     │ • Pasarela de cobro bancario en    │
+│ • Carrito y envío de comanda      │   tablet con datáfono virtual      │
+│ • Botón "Llamar Camarero"         │ • División de tickets entre varios │
+│ • Botón "Pedir la Cuenta"         │   comensales (escaneo de subcuentas│
+│ • WebSockets en red local         │ • Modificadores avanzados complejos│
+│ • Pantalla Cocina KDS reactiva    │   (puntos de cocción, salsas extra)│
+│ • Panel de Sala para avisos       │ • Sistema de reservas anticipadas  │
+│ • CRUD de platos y categorías     │ • Control automático de stock por  │
+│ • Marcado de platos agotados      │   recetas e ingredientes unitarios │
+│ • Despliegue Docker DAWEB         │ • Informes de analítica predictiva │
+└───────────────────────────────────┴────────────────────────────────────┘
+```
+
+#### Funcionalidades Imprescindibles (MVP - Fase 1):
+1. **Navegación táctil de carta:** Visualización de categorías, fotos, precios e información obligatoria de alérgenos en tablet.
+2. **Generación y envío de comanda:** Selección de platos con notas simples y confirmación desde la mesa.
+3. **Botonera fija de atención de sala:** Acceso en un toque a *"Llamar Camarero"* y *"Pedir Cuenta"* con confirmación visual.
+4. **Comunicación reactiva por WebSockets:** Difusión instantánea de eventos comensal-cocina-sala sin recargas manuales.
+5. **Pantalla KDS de cocina reactiva:** Recepción de comandas en tiempo real, ordenadas por tiempo de llegada, con cambio de estado de platos a golpe de clic o toque.
+6. **Panel de sala para camareros:** Vista global de mesas activas, alertas acústicas/visuales de llamada y notificación de platos listos para servir en el pase.
+7. **Panel de gestión administrativa:** CRUD básico de productos, precios y selector rápido de disponibilidad (*Disponible / Agotado*).
+8. **Despliegue contenerizado:** Despliegue con Docker Compose bajo servidor Nginx cumpliendo los objetivos del módulo DAWEB.
+
+#### Ampliaciones Justificadas para Fases Posteriores (Fase 2):
+* **Pasarela de cobro integrada en la tablet:** No se incluye en el MVP para evitar comisiones de intermediarios financieros y no someter el proyecto escolar a normativas bancarias PCI-DSS.
+* **División matemática de cuentas:** No es imprescindible para demostrar el flujo principal de servicio y comanda.
+* **Gestión exhaustiva de stock por gramos/ingredientes:** Añade una complejidad innecesaria para validar el objetivo del TFG (comunicación ágil en sala).
+* **Integración con agregadores de delivery (Glovo/Uber Eats):** Fuera del alcance deliberado del sistema presencial.
+
+---
+
+### 7.4. Solución Propuesta: Recorrido y Ciclo de Vida de una Comanda
+
+El recorrido de una comanda en Novanda abarca ocho etapas consecutivas perfectamente delimitadas, contemplando la interacción entre cliente, camarero y cocina:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   CICLO DE VIDA COMPLETO DE UNA COMANDA                │
+└────────────────────────────────────────────────────────────────────────┘
+
+ [1. Mesa Activa] ──> Comensales eligen platos en Tablet
+         │
+         ▼
+ [2. Cesta Borrador] ──> Comensal pulsa "Confirmar Pedido"
+         │
+         ▼
+ [3. Persistencia y Emisión] ──> API guarda comanda en BD y emite evento WebSocket
+         │
+         ├─── (Sin recargar pantalla) ────────────────────────┐
+         ▼                                                    ▼
+ [4. Pantalla KDS Cocina]                             [Panel Camarero Sala]
+     • Añade tarjeta con aviso sonoro                     • Mesa marcada con comanda activa
+     • Estado: RECIBIDO / Platos: PENDIENTE
+         │
+         ▼
+ [5. Elaboración en Partidas] ──> Cocinero marca platos a EN_MARCHA
+         │                        Al emplatar, marca a LISTO
+         ▼
+ [6. Pase y Servicio] ──> Camarero recibe aviso de "Plato Listo"
+         │                Recoge del pase y sirve en mesa (Estado: SERVIDO)
+         ▼
+ [7. Solicitud de Cuenta] ──> Comensal pulsa botón "Pedir la Cuenta" en Tablet
+         │                    Camarero acude a la mesa con datáfono o cambio
+         ▼
+ [8. Cierre y Cobro] ──> Camarero valida cobro en su panel
+                         Comanda pasa a CERRADO_PAGADO
+                         Mesa se libera y la Tablet se resetea a pantalla inicial
+```
+
+#### Descripción Detallada del Recorrido:
+
+1. **Apertura y Elección (Tablet Mesa):**
+   * La tablet de la mesa está en la pantalla principal con la carta fotográfica en modo oscuro.
+   * Los clientes añaden productos al carrito local. Mientras la comanda no sea enviada, permanece en estado `BORRADOR`.
+2. **Confirmación y Envío:**
+   * El cliente revisa la cesta y pulsa *"Confirmar Pedido"*.
+   * El cliente frontend envía una petición `POST /api/orders` con los identificadores de plato, mesa y notas.
+3. **Persistencia Transaccional y Difusión:**
+   * El backend procesa la petición dentro de una transacción en base de datos.
+   * Se crea el registro del pedido (`Order`) en estado `RECIBIDO` y los registros de cada plato (`OrderItem`) en estado `PENDIENTE`.
+   * El servidor emite un evento WebSocket `order:created` al canal de cocina (`room:kitchen`) y al canal de sala (`room:waiters`).
+4. **Recepción en Pantalla de Cocina (KDS) y Sala:**
+   * **Sin que el cocinero toque la pantalla ni recargue la página**, la tarjeta de comanda aparece en la columna de entrada con animación suave y una alerta auditiva discreta.
+   * En el panel del camarero, la mesa cambia su semáforo a *"Comanda en marcha"*.
+5. **Preparación en Cocina:**
+   * El cocinero pulsa sobre el plato para pasarlo a `EN_MARCHA`. El pedido general pasa automáticamente a `EN_PREPARACION`.
+   * Cuando el plato está cocinado y emplatado, el cocinero pulsa `LISTO`. El backend emite el evento `item:ready`.
+6. **Pase y Entrega:**
+   * El camarero ve la notificación *"Mesa 4: 2 platos listos en pase"*, los retira y los entrega en mesa. En su terminal marca los platos como `SERVIDO`.
+7. **Petición de Cuenta:**
+   * Una vez finalizada la comida, el comensal pulsa en la tablet el botón persistente *"Pedir la Cuenta"*.
+   * Se emite el evento WebSocket `table:bill_requested`. El panel del camarero emite aviso visual prioritario.
+8. **Cierre, Cobro y Reseteo:**
+   * El camarero acude a la mesa con el datáfono bancario o el cambio en efectivo del establecimiento.
+   * Tras efectuar el cobro, el camarero pulsa en su terminal *"Cobrar y Finalizar"*.
+   * El pedido pasa a `CERRADO_PAGADO`, el histórico queda archivado y la tablet de la mesa vuelve automáticamente a su pantalla inicial de bienvenida para los siguientes comensales.
+
+---
+
+### 7.5. Aspecto Crítico a Vigilar: Funcionamiento en Tiempo Real sin Recarga Manual
+
+Uno de los señalamientos más determinantes del profesor es:
+> **"No basta con que el pedido se guarde en la base de datos: la pantalla de cocina debe recibirlo y mostrarlo sin necesidad de recargar manualmente la página."**
+
+En una cocina profesional en hora punta, los cocineros tienen las manos ocupadas, usan guantes de protección o están emplatando; exigirles presionar la tecla `F5` o tocar la pantalla para refrescar la lista de pedidos generaría retrasos críticos, platos olvidados y frustración operativa.
+
+#### Por qué el polling tradicional HTTP es inaceptable:
+* **Latencia elevada:** Un `setInterval` de 10 segundos significa que una comanda puede tardar hasta 10 segundos en aparecer en cocina tras ser enviada.
+* **Sobrecarga de peticiones innecesarias:** Decenas de peticiones HTTP vacías saturando la red local del restaurante.
+* **Falta de reactividad:** La experiencia de usuario no es fluida ni profesional.
+
+#### Arquitectura de Comunicación Bidireccional Adoptada:
+Novanda implementa un modelo de comunicación basado en **WebSockets (protocolo `ws://` o `wss://` a través de Socket.io / WebSocket nativo)**:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│             ARQUITECTURA DE EVENTOS EN TIEMPO REAL (WEBSOCKETS)        │
+└────────────────────────────────────────────────────────────────────────┘
+
+    [TABLET MESA 3]                                [BACKEND NODE/EXPRESS]
+           │                                                  │
+           │ 1. POST /api/orders (Crear Comanda)              │
+           ├─────────────────────────────────────────────────>│
+           │                                                  │──> Guarda en BD
+           │                                                  │    (Transacción ACID)
+           │                                                  │
+           │                                                  │ 2. Emite evento WebSocket
+           │                                                  │    io.to("kitchen").emit("order:new")
+           │                                                  ├───────────────┐
+           │                                                  │               │
+           │                                                  ▼               ▼
+                                                  [PANTALLA KDS COCINA]  [PANEL CAMARERO]
+                                                  • Recibe socket 'order:new'
+                                                  • Inyecta tarjeta en DOM
+                                                  • Emite aviso sonoro (Bip)
+                                                  • 0 recargas manuales (No F5)
+```
+
+#### Especificación de Eventos y Manejo del DOM:
+1. **Suscripción por Salas (*Rooms*):**
+   * Las pantallas de cocina se suscriben al canal `kitchen`.
+   * Los terminales de sala se suscriben al canal `waiters`.
+   * Cada tablet de mesa se suscribe a su canal privado `table:{id}`.
+2. **Recepción reactiva en el Frontend del KDS:**
+   * La aplicación KDS escucha el evento `order:new`:
+   ```javascript
+   socket.on('order:new', (newOrder) => {
+     // 1. Añadir la comanda al estado reactivo (Virtual DOM / React State / Vue)
+     renderOrderCard(newOrder);
+     // 2. Ejecutar sonido de alerta en cocina
+     playNotificationChime();
+     // 3. Efecto visual de parpadeo suave para captar la vista
+     highlightNewTicket(newOrder.id);
+   });
+   ```
+3. **Mecanismo de Resiliencia y Reconexión Automática:**
+   * **Ping-Pong / Heartbeat:** Si la red Wi-Fi del restaurante sufre una micro-interrupción, el cliente detecta la pérdida de señal y activa reconexión automática en segundo plano con *exponential backoff*.
+   * **Sincronización de Estado al Reconectar:** Al restablecer el socket, el KDS solicita automáticamente `GET /api/orders/active` para asegurar que ningún pedido enviado durante la desconexión se haya extraviado.
+
+---
+
+## 8. Revisión y Ajustes del Proyecto (Semana 1 Revisitada)
+
+Tras el análisis de la competencia, las lecciones del mercado y las directrices docentes de la Semana 2:
+
+* **Se confirma plenamente el modelo de hardware dedicado:** Las deficiencias analizadas en Sunday y Pikotea demuestran que obligar al cliente a usar su propio móvil genera frustración; las tablets en mesa aportan una experiencia mucho más inclusiva y accesible.
+* **Se consolida el alcance del MVP:** Se prioriza el núcleo mesa-sala-cocina reactivo en tiempo real, posponiendo deliberadamente pasarelas de pago externas y módulos secundarios para la Fase 2.
+* **Se blinda la arquitectura técnica:** El funcionamiento reactivo sin recarga manual mediante WebSockets se erige como requisito técnico no negociable para el éxito del proyecto en DAWEB.
+
+---
+
+## 9. Gestión de Tareas con Tablero Kanban (Semana 2)
+
+En cumplimiento de la metodología docente, todas las tareas del estudio de mercado y el refinamiento técnico derivado del feedback han sido controladas a través del tablero Kanban del proyecto:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   TABLERO KANBAN: SEMANA 2 (ESTADO FINAL)              │
 ├──────────────────┬──────────────────┬──────────────────────────────────┤
 │ BACKLOG          │ EN PROGRESO      │ TERMINADO (DONE)                 │
 ├──────────────────┼──────────────────┼──────────────────────────────────┤
-│ • Diseño Mockups │ • Configuración  │ [x] Buscar aplicaciones similares│
-│   Figma UI mesa  │   entorno Docker │ [x] Investigar Pikotea           │
-│ • Modelado BD    │                  │ [x] Investigar Sunday            │
-│   (platos/mesas) │                  │ [x] Investigar Square Restaurant │
-│ • Prototipo KDS  │                  │ [x] Capturas y análisis flujos   │
-│                  │                  │ [x] Elaborar matrices DAFO       │
-│                  │                  │ [x] DAFO propio de Novanda       │
-│                  │                  │ [x] Definir propuesta de valor   │
-│                  │                  │ [x] Redacción Memoria v2.0       │
-│                  │                  │ [x] Organización de carpetas docs│
-│                  │                  │ [x] Subida a repositorio GitHub  │
+│ • Bocetos UI     │ • Entorno Docker │ [x] Investigar Pikotea           │
+│   Figma (Mesa)   │   para DAWEB     │ [x] Investigar Sunday            │
+│ • Mockups KDS    │                  │ [x] Investigar Square Restaurant │
+│ • Script DDL BD  │                  │ [x] Capturas y análisis flujos   │
+│                  │                  │ [x] DAFOs competidores y propio  │
+│                  │                  │ [x] Oportunidad y valor añadido  │
+│                  │                  │ [x] Matriz permisos RBAC roles   │
+│                  │                  │ [x] Distinción Order vs OrderItem│
+│                  │                  │ [x] Priorización MoSCoW (MVP)    │
+│                  │                  │ [x] Ciclo de vida de la comanda  │
+│                  │                  │ [x] Arquitectura WebSockets KDS  │
+│                  │                  │ [x] Redacción Memoria v2.0 act.  │
+│                  │                  │ [x] Sincronización con GitHub    │
 └──────────────────┴──────────────────┴──────────────────────────────────┘
 ```
 
 ### Relación de Tareas Ejecutadas en la Semana 2:
-1. **Buscar aplicaciones similares al proyecto:** Identificación de las 3 alternativas principales del sector (Pikotea, Sunday, Square).
-2. **Investigar la primera aplicación (Pikotea):** Análisis de su modelo SaaS, funciones de autocomanda y KDS.
-3. **Investigar la segunda aplicación (Sunday):** Estudio de su pasarela de pago móvil, división de cuentas y velocidad de cobro.
-4. **Investigar la tercera aplicación (Square para Restaurantes):** Examen de su ecosistema integral de hardware y TPV.
-5. **Probar las aplicaciones y realizar capturas:** Extracción y organización de capturas de pantallas clave en la carpeta `/docs/capturas`.
-6. **Elaborar los DAFO de competidores:** Análisis individualizado de Debilidades, Amenazas, Fortalezas y Oportunidades.
-7. **Elaborar la matriz DAFO propia de Novanda:** Determinación del posicionamiento estratégico frente al mercado.
-8. **Identificar oportunidades de mejora y valor diferencial:** Respuesta a las 5 preguntas del estudio de oportunidad.
-9. **Actualizar la Memoria del Proyecto:** Redacción formal de la versión 2.0 integrando la Semana 1 y la Semana 2.
-10. **Revisar la documentación y subir los cambios a GitHub:** Commit y push de la estructura documental completa.
+1. **TSK-09:** Búsqueda y análisis de 3 plataformas representativas del sector (Pikotea, Sunday, Square).
+2. **TSK-10 a 13:** Estudio técnico y recopilación de evidencias visuales en `/docs/capturas`.
+3. **TSK-14 y 15:** Elaboración de las matrices DAFO comparativas y DAFO propio de Novanda.
+4. **TSK-16:** Definición razonada de la propuesta de valor y oportunidad de mercado.
+5. **TSK-17:** Concreción de roles, matriz RBAC y reglas de modificación/cancelación de comandas.
+6. **TSK-18:** Formalización de la separación entre estado de comanda completa y estado de plato individual.
+7. **TSK-19:** Priorización de funcionalidades MoSCoW delimitando el MVP (Fase 1) frente a ampliaciones.
+8. **TSK-20:** Modelado del recorrido y ciclo de vida integral de una comanda (8 etapas).
+9. **TSK-21:** Diseño de la arquitectura en tiempo real con WebSockets para pantalla KDS sin recarga de página.
+10. **TSK-22:** Consolidación de la documentación en `Memoria_Novanda_v2.md` y `MEMORIA.md`, y actualización en GitHub.
