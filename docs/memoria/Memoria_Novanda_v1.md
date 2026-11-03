@@ -8,7 +8,7 @@
 * **Autor:** Darío Caño Molina
 * **Centro Educativo:** IES Fernando III
 * **Ciclo Formativo:** Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)
-* **Módulo Profesional:** Despliegue de Aplicaciones Web (DAWEB)
+* **Módulo Profesional:** Proyecto de Desarrollo de Aplicaciones Web (TFG)
 * **Curso Académico:** 2025 / 2026
 * **Versión del Documento:** v1.0 (Entregable Semana 1)
 * **Repositorio Oficial:** [https://github.com/dariocano020/Novanda.git](https://github.com/dariocano020/Novanda.git)
@@ -58,7 +58,7 @@ La premisa de Novanda es eliminar todas las barreras de entrada para el comensal
        ┌──────────────┴──────────────────────────┴──────────────┐
        │             PANEL DE ADMINISTRACIÓN / BACKEND          │
        │   - Gestión de carta, platos, precios y categorías     │
-       │   - Despliegue modular en contenedor (DAWEB)           │
+       │   - Despliegue modular en contenedores (Docker)        │
        └────────────────────────────────────────────────────────┘
 ```
 
@@ -81,14 +81,14 @@ Desarrollar y desplegar una aplicación web completa y modular orientada a la ho
    * Desarrollar una pantalla KDS (*Kitchen Display System*) donde las comandas lleguen ordenadas cronológicamente, indicando mesa, hora de comanda y modificaciones especiales.
 4. **Para la Gestión del Local:**
    * Disponer de un módulo administrativo sencillo para altas, bajas y modificaciones de productos, precios y categorías en tiempo real.
-5. **Para el Ámbito Académico y Técnico (DAWEB):**
+5. **Para el Ámbito Académico y Técnico (Proyecto DAW / TFG):**
    * Aplicar una arquitectura desacoplada basada en contenedores (Docker), garantizando un despliegue ágil, seguro, escalable y mantenible en entornos de producción.
 
 ---
 
 ## 4. Alcance y Límites del Sistema
 
-Para asegurar la viabilidad del proyecto durante el curso académico y ajustarse a la metodología de entregas semanales de DAWEB, se delimita claramente el alcance:
+Para asegurar la viabilidad del proyecto durante el curso académico y ajustarse a la metodología de entregas semanales del módulo de Proyecto (TFG), se delimita claramente el alcance:
 
 ### 4.1. Qué incluye el proyecto (Alcance dentro del sistema)
 * **Módulo Mesa (Tablet Comensal):**
@@ -151,7 +151,7 @@ Para asegurar la viabilidad del proyecto durante el curso académico y ajustarse
 
 ## 7. Metodología de Trabajo y Planificación Inicial
 
-Para el desarrollo del proyecto se adopta una metodología de trabajo ágil basada en **Kanban**, apoyada en un repositorio Git alojado en GitHub. El trabajo se organiza en iteraciones semanales orientadas a los entregables del módulo DAWEB.
+Para el desarrollo del proyecto se adopta una metodología de trabajo ágil basada en **Kanban**, apoyada en un repositorio Git alojado en GitHub. El trabajo se organiza en iteraciones semanales orientadas a los entregables del módulo de Proyecto (TFG).
 
 ### 7.1. Planificación Inicial de Sprints
 * **Semana 1:** Elección de la idea inicial, justificación, alcance y definición de objetivos (Memoria v1.0).

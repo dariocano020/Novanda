@@ -1,6 +1,6 @@
 # PROYECTO FINAL DE CICLO / TFG: NOVANDA
 ## MEMORIA TÉCNICA Y DOCUMENTACIÓN OFICIAL DEL PROYECTO (v2.0)
-### Módulo: Despliegue de Aplicaciones Web (DAWEB) — IES Fernando III
+### Módulo: Proyecto de Desarrollo de Aplicaciones Web (TFG) — IES Fernando III
 
 ---
 
@@ -10,7 +10,7 @@
 | **Autor** | **Darío Caño Molina** (`dariocano2005@gmail.com`) |
 | **Centro Docente** | **IES Fernando III** |
 | **Ciclo Formativo** | Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW) |
-| **Módulo** | Despliegue de Aplicaciones Web (DAWEB) |
+| **Módulo** | Proyecto de Desarrollo de Aplicaciones Web (TFG) |
 | **Curso Académico** | 2025 / 2026 |
 | **Versión del Documento** | **Versión 2.0 (Consolidada y Revisada con Retroalimentación Docente)** |
 | **Repositorio GitHub** | [https://github.com/dariocano020/Novanda.git](https://github.com/dariocano020/Novanda.git) |
@@ -104,7 +104,7 @@ Diseñar, implementar y desplegar una plataforma web modular para establecimient
 * Construir una pantalla KDS reactiva para el personal de cocina con actualización instantánea vía WebSockets.
 * Desarrollar un panel de sala para la gestión de avisos, estados de mesa y platos listos para servir.
 * Implementar un panel administrativo ligero para la gestión de cartas, platos, alérgenos y precios.
-* Desplegar la solución mediante contenedores Docker y servidor web Nginx según los estándares del módulo DAWEB.
+* Desplegar la solución mediante contenedores Docker y servidor web Nginx garantizando un entorno reproducible para el Proyecto de Fin de Ciclo (TFG).
 
 ---
 
@@ -128,7 +128,7 @@ Para garantizar la viabilidad del proyecto durante el curso lectivo y enfocar el
 │ • Panel de Sala para avisos       │ • Sistema de reservas anticipadas  │
 │ • CRUD de platos y categorías     │ • Control automático de stock por  │
 │ • Marcado de platos agotados      │   recetas e ingredientes unitarios │
-│ • Despliegue Docker DAWEB         │ • Informes de analítica predictiva │
+│ • Despliegue Docker y Nginx       │ • Informes de analítica predictiva │
 └───────────────────────────────────┴────────────────────────────────────┘
 ```
 
@@ -329,12 +329,12 @@ Novanda resuelve este reto mediante una **arquitectura orientada a eventos react
 * **RNF-02 (Cero Recargas Manuales):** Funcionamiento continuo de las pantallas de sala y cocina sin recargas de página.
 * **RNF-03 (Usabilidad Táctil Universal):** Diseño táctil adaptado a pantallas de 10 pulgadas con áreas de pulsación mínimas de 48x48 px, utilizable por cualquier rango de edad.
 * **RNF-04 (Tolerancia a Fallos en Red Local):** Operatividad plena en la intranet del restaurante y reconexión automática en microcortes Wi-Fi.
-* **RNF-05 (Despliegue DAWEB):** Empaquetado completo en contenedores Docker gestionados mediante Docker Compose y proxy inverso Nginx.
+* **RNF-05 (Despliegue en Contenedores):** Empaquetado completo en contenedores Docker gestionados mediante Docker Compose y proxy inverso Nginx.
 
 ---
 
 ### 2.10. Planificación y Metodología Inicial
-Adopción del marco ágil **Kanban** organizado en iteraciones semanales orientadas a los hitos de DAWEB, con control de versiones en GitHub.
+Adopción del marco ágil **Kanban** organizado en iteraciones semanales orientadas a los hitos del módulo de Proyecto (TFG), con control de versiones en GitHub.
 
 ---
 
@@ -438,7 +438,7 @@ El estudio de mercado y la retroalimentación docente de la Semana 2 ratifican p
 **Próximos pasos para las Semanas 3 en adelante:**
 1. Diseño de los *wireframes* y prototipos interactivos en Figma para la tablet de mesa, el panel de sala y el KDS de cocina.
 2. Definición formal del modelo entidad-relación y script DDL de la base de datos (tablas `orders`, `order_items`, `dishes`, `categories`, `tables`, `users`).
-3. Configuración del entorno contenerizado en Docker con Docker Compose y Nginx (módulo DAWEB).
+3. Configuración del entorno contenerizado en Docker con Docker Compose y proxy inverso Nginx.
 4. Desarrollo de la API REST y del servidor de eventos WebSockets en backend.
 5. Implementación del cliente reactivo KDS con avisos sonoros y recepción automática de comandas.
 

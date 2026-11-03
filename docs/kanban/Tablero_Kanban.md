@@ -1,12 +1,12 @@
 # TABLERO DE GESTIÓN KANBAN / METODOLOGÍA ÁGIL
-## Proyecto: Novanda — Módulo: DAWEB (IES Fernando III)
+## Proyecto: Novanda — Módulo: Proyecto de Desarrollo de Aplicaciones Web / TFG (IES Fernando III)
 **Autor:** Darío Caño Molina | **Curso:** 2025/2026
 
 ---
 
 ## 1. Metodología de Trabajo
 
-Para asegurar un desarrollo iterativo e incremental acorde con los requerimientos de la asignatura de **Despliegue de Aplicaciones Web (DAWEB)**, se utiliza un marco de trabajo ágil apoyado en la metodología **Kanban**. 
+Para asegurar un desarrollo iterativo e incremental acorde con los requerimientos del módulo de **Proyecto de Desarrollo de Aplicaciones Web (TFG)**, se utiliza un marco de trabajo ágil apoyado en la metodología **Kanban**.
 
 El flujo de trabajo se divide en cuatro estados fundamentales para cada tarjeta de tarea (*Work In Progress - WIP*):
 * **Backlog:** Ideas, requerimientos futuros y tareas pendientes de priorizar.

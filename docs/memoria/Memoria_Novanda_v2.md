@@ -1,6 +1,6 @@
 # MEMORIA DEL PROYECTO: NOVANDA (Versión 2.0 - Actualizada)
 ## Semana 2 — Análisis del Sector, Estudio de Mercado y Refinamiento del Alcance
-### Módulo: Despliegue de Aplicaciones Web (DAWEB) — IES Fernando III
+### Módulo: Proyecto de Desarrollo de Aplicaciones Web (TFG) — IES Fernando III
 
 ---
 
@@ -9,7 +9,7 @@
 * **Autor:** Darío Caño Molina (`dariocano2005@gmail.com`)
 * **Centro Educativo:** IES Fernando III
 * **Ciclo Formativo:** Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)
-* **Módulo Profesional:** Despliegue de Aplicaciones Web (DAWEB)
+* **Módulo Profesional:** Proyecto de Desarrollo de Aplicaciones Web (TFG)
 * **Curso Académico:** 2025 / 2026
 * **Versión del Documento:** v2.0 (Revisión consolidada con mejoras docentes de Semana 2)
 * **Repositorio Oficial:** [https://github.com/dariocano020/Novanda.git](https://github.com/dariocano020/Novanda.git)
@@ -337,7 +337,7 @@ Para garantizar que el proyecto sea 100% alcanzable durante el curso lectivo sin
 │ • Panel de Sala para avisos       │ • Sistema de reservas anticipadas  │
 │ • CRUD de platos y categorías     │ • Control automático de stock por  │
 │ • Marcado de platos agotados      │   recetas e ingredientes unitarios │
-│ • Despliegue Docker DAWEB         │ • Informes de analítica predictiva │
+│ • Despliegue Docker y Nginx       │ • Informes de analítica predictiva │
 └───────────────────────────────────┴────────────────────────────────────┘
 ```
 
@@ -349,7 +349,7 @@ Para garantizar que el proyecto sea 100% alcanzable durante el curso lectivo sin
 5. **Pantalla KDS de cocina reactiva:** Recepción de comandas en tiempo real, ordenadas por tiempo de llegada, con cambio de estado de platos a golpe de clic o toque.
 6. **Panel de sala para camareros:** Vista global de mesas activas, alertas acústicas/visuales de llamada y notificación de platos listos para servir en el pase.
 7. **Panel de gestión administrativa:** CRUD básico de productos, precios y selector rápido de disponibilidad (*Disponible / Agotado*).
-8. **Despliegue contenerizado:** Despliegue con Docker Compose bajo servidor Nginx cumpliendo los objetivos del módulo DAWEB.
+8. **Despliegue contenerizado:** Despliegue con Docker Compose bajo servidor Nginx asegurando una puesta en marcha reproducible del proyecto (TFG).
 
 #### Ampliaciones Justificadas para Fases Posteriores (Fase 2):
 * **Pasarela de cobro integrada en la tablet:** No se incluye en el MVP para evitar comisiones de intermediarios financieros y no someter el proyecto escolar a normativas bancarias PCI-DSS.
@@ -495,7 +495,7 @@ Tras el análisis de la competencia, las lecciones del mercado y las directrices
 
 * **Se confirma plenamente el modelo de hardware dedicado:** Las deficiencias analizadas en Sunday y Pikotea demuestran que obligar al cliente a usar su propio móvil genera frustración; las tablets en mesa aportan una experiencia mucho más inclusiva y accesible.
 * **Se consolida el alcance del MVP:** Se prioriza el núcleo mesa-sala-cocina reactivo en tiempo real, posponiendo deliberadamente pasarelas de pago externas y módulos secundarios para la Fase 2.
-* **Se blinda la arquitectura técnica:** El funcionamiento reactivo sin recarga manual mediante WebSockets se erige como requisito técnico no negociable para el éxito del proyecto en DAWEB.
+* **Se blinda la arquitectura técnica:** El funcionamiento reactivo sin recarga manual mediante WebSockets se erige como requisito técnico no negociable para el éxito del Proyecto de Fin de Ciclo (TFG).
 
 ---
 
@@ -510,7 +510,7 @@ En cumplimiento de la metodología docente, todas las tareas del estudio de merc
 │ BACKLOG          │ EN PROGRESO      │ TERMINADO (DONE)                 │
 ├──────────────────┼──────────────────┼──────────────────────────────────┤
 │ • Bocetos UI     │ • Entorno Docker │ [x] Investigar Pikotea           │
-│   Figma (Mesa)   │   para DAWEB     │ [x] Investigar Sunday            │
+│   Figma (Mesa)   │   con Compose    │ [x] Investigar Sunday            │
 │ • Mockups KDS    │                  │ [x] Investigar Square Restaurant │
 │ • Script DDL BD  │                  │ [x] Capturas y análisis flujos   │
 │                  │                  │ [x] DAFOs competidores y propio  │

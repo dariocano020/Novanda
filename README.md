@@ -1,6 +1,6 @@
 # 🍽️ Novanda — Sistema Interactivo en Mesa para Hostelería
 
-[![DAWEB](https://img.shields.io/badge/Módulo-DAWEB-007ACC.svg?style=flat-square)](docs/memoria/Memoria_Novanda_v2.md)
+[![Proyecto DAW / TFG](https://img.shields.io/badge/Módulo-Proyecto_DAW_/_TFG-007ACC.svg?style=flat-square)](docs/memoria/Memoria_Novanda_v2.md)
 [![DAW](https://img.shields.io/badge/Ciclo-DAW_2º-green.svg?style=flat-square)](docs/memoria/Memoria_Novanda_v1.md)
 [![Centro](https://img.shields.io/badge/IES-Fernando_III-orange.svg?style=flat-square)](https://iesfernando3.es)
 [![Versión](https://img.shields.io/badge/Memoria-v2.0_(Semana_1_+_Semana_2)-blueviolet.svg?style=flat-square)](MEMORIA.md)
@@ -112,5 +112,5 @@ Novanda/
 * **Correo de contacto:** [dariocano2005@gmail.com](mailto:dariocano2005@gmail.com)
 * **Centro Educativo:** IES Fernando III
 * **Ciclo:** Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)
-* **Asignatura / Módulo:** Despliegue de Aplicaciones Web (DAWEB)
+* **Asignatura / Módulo:** Proyecto de Desarrollo de Aplicaciones Web (TFG)
 * **Año Académico:** 2025 - 2026
